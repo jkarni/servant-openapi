@@ -35,6 +35,7 @@ source-repository head
 library
   default-extensions:
     DataKinds
+    DeriveDataTypeable
     DeriveGeneric
     DerivingStrategies
     DuplicateRecordFields
