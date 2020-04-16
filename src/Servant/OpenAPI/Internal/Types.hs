@@ -39,7 +39,7 @@ data OpenAPI = OpenAPI
     --   @/@.
   , paths :: Map PathPattern PathItemObject
     -- ^ The available paths and operations for the API
-  , compontents :: Maybe ComponentsObject
+  , components :: Maybe ComponentsObject
     -- ^ An element to hold various schemas for the specification
   , security :: Maybe [SecurityRequirementObject]
     -- ^ A declaration of which security mechanisms can be used across the API.
@@ -72,7 +72,7 @@ apiPaths :: Lens' OpenAPI (Map PathPattern PathItemObject)
 apiPaths = #paths
 
 apiComponents :: Lens' OpenAPI (Maybe ComponentsObject)
-apiComponents = #compontents
+apiComponents = #components
 
 apiSecurity :: Lens' OpenAPI (Maybe [SecurityRequirementObject])
 apiSecurity = #security
