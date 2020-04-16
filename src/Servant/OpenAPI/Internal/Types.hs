@@ -56,6 +56,9 @@ data OpenAPI = OpenAPI
     --   based on the tools' logic. Each tag name in the list MUST be unique.
   , externalDocs :: Maybe ExternalDocumentationObject
     -- ^ Additional external documentation
+  , extensions :: Maybe (Map Text Value)
+    -- ^ Specification extensions. The @x-@ prefix is automatically prepended
+    -- to the extension name.
   }
   deriving stock (Generic, Data, Show, Eq)
 
